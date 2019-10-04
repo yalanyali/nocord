@@ -7,9 +7,9 @@ const io = require('socket.io')(server)
 const signalServer = require('simple-signal-server')(io)
 
 router.get('/*', (_, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'))
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
 })
-app.use(express.static((path.join(__dirname, 'frontend', 'build'))))
+app.use(express.static((path.join(__dirname, 'client', 'build'))))
 app.use('/', router)
 
 server.listen(process.env.PORT || 80)
