@@ -156,8 +156,9 @@ class App extends React.Component {
   toggleMic = async () => {
     if (this.audioStream === null) {
       // New audio stream
+      let newAudioStream
       try {
-        const newAudioStream = await navigator.mediaDevices.getUserMedia({ video: false, audio: true })
+        newAudioStream = await navigator.mediaDevices.getUserMedia({ video: false, audio: true })
       } catch (err) {
         console.log('Problem while getUserMedia:', err)
         return
@@ -184,8 +185,9 @@ class App extends React.Component {
 
     if (this.videoStream === null) {
       // New video stream
+      let newVideoStream
       try {
-        const newVideoStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+        newVideoStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false })
       } catch (err) {
         console.log('Problem while getUserMedia:', err)
         return
@@ -213,8 +215,9 @@ class App extends React.Component {
 
     if (this.videoStream === null) {
       // New video stream
+      let newVideoStream
       try {
-        const newVideoStream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true })
+        newVideoStream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true })
       } catch (err) {
         console.log('Problem while getDisplayMedia:', err)
         return
