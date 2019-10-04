@@ -156,7 +156,12 @@ class App extends React.Component {
   toggleMic = async () => {
     if (this.audioStream === null) {
       // New audio stream
-      const newAudioStream = await navigator.mediaDevices.getUserMedia({ video: false, audio: true })
+      try {
+        const newAudioStream = await navigator.mediaDevices.getUserMedia({ video: false, audio: true })
+      } catch (err) {
+        console.log('Problem while getUserMedia:', err)
+        return
+      }
       this.setState({ micActive: true })
       console.log('Created audio stream:', newAudioStream)
       if (this.state.connected) {
@@ -179,7 +184,12 @@ class App extends React.Component {
 
     if (this.videoStream === null) {
       // New video stream
-      const newVideoStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+      try {
+        const newVideoStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+      } catch (err) {
+        console.log('Problem while getUserMedia:', err)
+        return
+      }
       this.setState({ camActive: true })
       console.log('Created video stream (Webcam):', newVideoStream)
       // Call every connection again
@@ -203,7 +213,12 @@ class App extends React.Component {
 
     if (this.videoStream === null) {
       // New video stream
-      const newVideoStream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true })
+      try {
+        const newVideoStream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true })
+      } catch (err) {
+        console.log('Problem while getDisplayMedia:', err)
+        return
+      }
       // Screen sharing with audio, close audio stream
       // if (this.videoStream.getAudioTracks().length > 0 && this.state.micActive) {
       //   await this.toggleMic()
