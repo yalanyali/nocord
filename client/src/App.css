@@ -1,0 +1,49 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.url-container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  width: 400px;
+}
+
+#screen {
+  background-color: black;
+  width: 80vw;
+  max-width: 1250px;
+  max-height: 640px;
+}
+
+#speaker {
+  display: none;
+}
+
+.MuiIconButton-root {
+  color: rgba(0, 0, 0, 0.74) !important;
+}
