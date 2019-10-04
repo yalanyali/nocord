@@ -251,11 +251,9 @@ class App extends React.Component {
     if (this.streamHasVideo(stream)) {
       this.refs.screen.srcObject = null
       this.refs.screen.muted = true
-      this.refs.screen.controls = true
       this.refs.screen.srcObject = stream
       this.refs.screen.load()
     } else {
-      console.log('SES')
       this.refs.speaker.srcObject = null
       this.refs.speaker.srcObject = stream
     }
