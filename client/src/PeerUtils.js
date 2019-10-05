@@ -12,6 +12,7 @@ const ICE_SERVERS = [
   // { 'urls': 'stun:217.10.68.152:10000' },
   { 'url': 'turn:numb.viagenie.ca', 'username': 'y.alanyali@gmail.com', 'credential': 'testserver', 'credentialType': 'password' },
   { 'urls': 'turn:192.155.84.88', 'username': 'easyRTC', 'credential': 'easyRTC@pass', 'credentialType': 'password' }
+  // { 'urls': 'turn:0.peer.js.com', 'username': 'peerjs', 'credential': 'peerjsp', 'credentialType': 'password'}
   // { 'urls': 'turn:192.155.84.88?transport=tcp', 'username': 'easyRTC', 'credential': 'easyRTC@pass', 'credentialType': 'password' },
   // {
   //   'urls': 'turn:192.155.86.24:443',
