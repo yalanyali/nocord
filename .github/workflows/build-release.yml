@@ -17,6 +17,6 @@ jobs:
       - name: Release
         uses: JasonEtco/upload-to-release@master
         with:
-          args: release.tar.gz
+          args: release.tar.gz application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
