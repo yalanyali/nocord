@@ -12,6 +12,9 @@ jobs:
         uses: actions/checkout@master
       - name: Build
         run: |
+          cd client && npm install --production && npm run build
+          cd .. && mv client/build ./build
+          rm -rf client && mkdir client && mv ./build client/
           tar zcvf release.tar.gz *
       - name: Release
         uses: softprops/action-gh-release@v1
