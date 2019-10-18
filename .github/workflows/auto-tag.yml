@@ -12,7 +12,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@master
-      - name: Auto Tag
-        uses: anothrNick/github-tag-action@master
+      - name: New Release
+        uses: yalanyali/github-release-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
