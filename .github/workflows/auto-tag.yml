@@ -16,4 +16,3 @@ jobs:
         uses: yalanyali/github-release-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USER: yalanyali
