@@ -15,4 +15,5 @@ jobs:
       - name: New Release
         uses: yalanyali/github-release-action@master
         env:
+          GITHUB_USER: ${{ secrets.GITHUB_USER }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
