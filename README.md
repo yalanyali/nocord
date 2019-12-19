@@ -1,21 +1,19 @@
-<br />
+
+<a href="https://nocord.yigit.host">
+<img src="https://i.imgur.com/RCBw6Br.jpg"></img>
+</a>
 <p align="center">
   <h3 align="center">Nocord</h3>
 
   <p align="center">
     An easy to use video chat (and screen sharing) app.
     <br />
-    <br />
-    <a href="https://nocord.yigit.host">
-    <img src="https://i.imgur.com/RCBw6Br.jpg"></img>
-    </a>
-    <br />
-    <br />
     <a href="https://nocord.yigit.host">Try it!</a>
     ·
     <a href="https://github.com/yalanyali/nocord/issues">Report Bug</a>
     ·
     <a href="https://github.com/yalanyali/nocord/issues">Request Feature</a>
+    <br />
   </p>
 </p>
 
