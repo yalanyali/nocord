@@ -1,7 +1,6 @@
 import SimpleSignalClient from 'simple-signal-client'
 import socketIOClient from 'socket.io-client'
 
-// const SOCKET_SERVER = window.location.origin.replace('3000', '80') // DEV
 const SOCKET_SERVER = window.location.origin
 
 const ICE_SERVERS = [
@@ -32,12 +31,11 @@ export default class PeerUtils {
   constructor (onNewPeer, onPeerDisconnect, onConnected, targetPeer = null) {
     this.socket = socketIOClient(SOCKET_SERVER)
     this.signalClient = new SimpleSignalClient(this.socket, { connectionTimeout: 5 * 1000 })
-    this.hostPeer = null // Joiner keeps only the host peer
+    this.hostPeer = null // Joining peer keeps only the host peer
 
     // Discover checks if the peer with the given id exists
     this.signalClient.once('discover', async (peerExists) => {
       if (targetPeer) {
-        // We were trying to check if target peer exists
         if (peerExists) {
           try {
             const { peer } = await this.signalClient.connect(targetPeer,
@@ -57,8 +55,8 @@ export default class PeerUtils {
           console.log('Peer is not online.')
         }
       } else {
-        // No target peer, we're hosting
-        // We have our own peer id at this point
+        // No target peer, peer is hosting
+        // Peer has own peer id at this point
         console.log('Hosted with id', this.signalClient.id)
         onConnected(this.signalClient.id)
       }
@@ -98,7 +96,7 @@ export default class PeerUtils {
     })
 
     this.socket.on('welcome', message => {
-      // Hoster welcomes with its socket id
+      // Hosting peer welcomes with its socket id
       this.hostPeer.socketId = message.socketId
     })
   }

@@ -21,9 +21,10 @@ signalServer.on('discover', (request) => {
   const clientID = request.socket.id
   socketIDs.add(clientID)
   if (request.discoveryData.targetPeer) {
-    // Client has a target to join
+    // Client has a peer to join
     request.discover(clientID, socketIDs.has(request.discoveryData.targetPeer))
   } else {
+    // Client waits for a peer
     request.discover(clientID, false)
   }
 })

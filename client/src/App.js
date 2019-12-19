@@ -1,8 +1,6 @@
 import React from 'react'
 import PeerUtils from './PeerUtils'
 
-// import Peer from 'simple-peer' // DEV
-
 import './App.css'
 import Snackbar from '@material-ui/core/Snackbar'
 import Typography from '@material-ui/core/Typography'
@@ -381,7 +379,7 @@ class App extends React.Component {
         <div className='main-container'>
 
           <Typography variant="h3">
-            Screen Share
+            Nocord
           </Typography>
 
           {
