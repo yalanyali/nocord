@@ -7,7 +7,7 @@
     <br />
     <br />
     <a href="https://nocord.yigit.host">
-    <img src="https://i.imgur.com/PO1p6c1.jpg" border="3"></img>
+    <img src="https://i.imgur.com/RCBw6Br.jpg"></img>
     </a>
     <br />
     <br />
