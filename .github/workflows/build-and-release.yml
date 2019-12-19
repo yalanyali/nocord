@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build and Release
-        uses: yalanyali/github-release-action@master
+        uses: yalanyali/github-release-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
